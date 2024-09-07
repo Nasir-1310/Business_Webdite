@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Categories</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .categories-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 40px;
+        }
+
+        .category {
+            position: relative;
+            width: 32%; /* Ensures 3 categories per row */
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px; /* Space between rows */
+            cursor: pointer;
+        }
+
+        .category img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .category:hover img {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+        .category-name {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="categories-container">
+        <!-- Category 1 -->
+        <div class="category" onclick="window.location.href='#category1'">
+            <img src="images/newItem1.png" alt="Category 1">
+            <div class="category-name">Category 1</div>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="category" onclick="window.location.href='#category2'">
+            <img src="images/newItem2.png" alt="Category 2">
+            <div class="category-name">Category 2</div>
+        </div>
+<!-- 
+        Category 3 -->
+        <div class="category" onclick="window.location.href='#category3'">
+            <img src="images/newItem3.png" alt="Category 3">
+            <div class="category-name">Category 3</div>
+        </div>
+<!-- 
+        Add more categories here by copying the below block -->
+        <!-- Category 4 --> -->
+        <div class="category" onclick="window.location.href='#category4'">
+            <img src="images/newItem4.png" alt="Category 4">
+            <div class="category-name">Category 4</div>
+        </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

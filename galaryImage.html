@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollable Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            margin: 20px auto;
+            max-width: 100%;
+            overflow: hidden; /* Hide the scrollbar */
+        }
+
+        .upper-gallery {
+            text-align: left;
+            margin-bottom: 20px;
+            margin-left: 40px;
+        }
+
+        .upper-gallery h1 {
+            margin-left: 40px;
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .text-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 5px;
+            margin-right: 40px;
+        }
+
+        .show-all {
+            padding: 7px 12px;
+            background-color: rgb(141, 124, 124);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid yellow;
+            border-radius: 5px;
+        }
+
+        .show-all:hover {
+            background-color: #000000;
+        }
+
+        .gallery {
+            display: flex;
+            transition: transform 0.5s ease-in-out; /* Smooth scrolling */
+            overflow-x: auto;
+            scroll-behavior: smooth; /* Enable smooth scrolling */
+            scrollbar-width: none; /* Hide scrollbar in Firefox */
+            -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+        }
+
+        .gallery::-webkit-scrollbar {
+            display: none; /* Hide scrollbar in WebKit browsers */
+        }
+
+        .gallery-item {
+            flex: 0 0 25%; /* Display four items per view */
+            box-sizing: border-box;
+            position: relative;
+            padding: 0 10px; /* Adjust padding for spacing */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-item .description {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .gallery-item .item-description {
+            font-size: 12px;
+            color: rgb(83, 67, 67);
+        }
+
+        .gallery-item a {
+            text-decoration: none;
+            color: rgb(83, 67, 67);
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 15px;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            z-index: 10;
+            user-select: none;
+        }
+
+        .arrow.left {
+            left: 10px;
+        }
+
+        .arrow.right {
+            right: 10px;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 0px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 5;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div class="upper-gallery">
+            <h1>NEW IN</h1>
+            <div class="text-container">
+                <p>The latest and greatest. See our new arrivals</p>
+                <a href="#" class="show-all">VIEW ALL</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="arrow left" onclick="scrollGallery(-0.25)">&lt;</div>
+            <div class="gallery" id="gallery">
+                <div class="gallery-item">
+                    <div class="overlay-text">New Arrival</div>
+                    <img src="images/newItem1.png" alt="First Item">
+                    <div class="description">
+                        <a href="/products/the-chevron-trousers-black" class="item-description">THE CHEVRON TROUSERS - BLACK<br></a>
+                        <span class="item-description">Sale price: €64,95</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="overlay-text">New Arrival</div>
+                    <img src="images/newItem2.png" alt="Second Item">
+                    <div class="description">
+                        <a href="/products/the-chevron-trousers-black" class="item-description">THE CHEVRON TROUSERS - BLACK<br></a>
+                        <span class="item-description">Sale price: €64,95</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="overlay-text">New Arrival</div>
+                    <img src="images/newItem3.png" alt="Third Item">
+                    <div class="description">
+                        <a href="/products/the-chevron-trousers-black" class="item-description">THE CHEVRON TROUSERS - BLACK<br></a>
+                        <span class="item-description">Sale price: €64,95</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="overlay-text">New Arrival</div>
+                    <img src="images/newItem4.png" alt="Fourth Item">
+                    <div class="description">
+                        <a href="/products/the-chevron-trousers-black" class="item-description">THE CHEVRON TROUSERS - BLACK<br></a>
+                        <span class="item-description">Sale price: €64,95</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="overlay-text">New Arrival</div>
+                    <img src="images/newItem5.png" alt="Fifth Item">
+                    <div class="description">
+                        <a href="/products/the-chevron-trousers-black" class="item-description">THE CHEVRON TROUSERS - BLACK<br></a>
+                        <span class="item-description">Sale price: €64,95</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="overlay-text">New Arrival</div>
+                    <img src="images/newItem6.png" alt="Sixth Item">
+                    <div class="description">
+                        <a href="/products/the-chevron-trousers-black" class="item-description">THE CHEVRON TROUSERS - BLACK<br></a>
+                        <span class="item-description">Sale price: €64,95</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="overlay-text">New Arrival</div>
+                    <img src="images/newItem7.png" alt="Seventh Item">
+                    <div class="description">
+                        <a href="/products/the-chevron-trousers-black" class="item-description">THE CHEVRON TROUSERS - BLACK<br></a>
+                        <span class="item-description">Sale price: €64,95</span>
+                    </div>
+                </div>
+                <!-- Add more items as needed -->
+            </div>
+            <div class="arrow right" onclick="scrollGallery(0.25)">&gt;</div>
+        </div>
+    </div>
+
+
+
+    <div>
+        <div class="upper-gallery">
+            <h1>NEW IN</h1>
+            <div class="text-container">
+                <p>The latest and greatest. See our new arrivals</p>
+                <a href="#" class="show-all">VIEW ALL</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="arrow left" onclick="scrollGallery_upcoming(-0.25)">&lt;</div>
+            <div class="gallery" id="gallery-upcoming">
+                <div class="gallery-item">
+                    <div class="overlay-text">New Arrival</div>
+                    <img src="images/newItem1.png" alt="First Item">
+                    <div class="description">
+                        <a href="/products/the-chevron-trousers-black" class="item-description">THE CHEVRON TROUSERS - BLACK<br></a>
+                        <span class="item-description">Sale price: €64,95</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="overlay-text">New Arrival</div>
+                    <img src="images/newItem2.png" alt="Second Item">
+                    <div class="description">
+                        <a href="/products/the-chevron-trousers-black" class="item-description">THE CHEVRON TROUSERS - BLACK<br></a>
+                        <span class="item-description">Sale price: €64,95</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="overlay-text">New Arrival</div>
+                    <img src="images/newItem3.png" alt="Third Item">
+                    <div class="description">
+                        <a href="/products/the-chevron-trousers-black" class="item-description">THE CHEVRON TROUSERS - BLACK<br></a>
+                        <span class="item-description">Sale price: €64,95</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="overlay-text">New Arrival</div>
+                    <img src="images/newItem4.png" alt="Fourth Item">
+                    <div class="description">
+                        <a href="/products/the-chevron-trousers-black" class="item-description">THE CHEVRON TROUSERS - BLACK<br></a>
+                        <span class="item-description">Sale price: €64,95</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="overlay-text">New Arrival</div>
+                    <img src="images/newItem5.png" alt="Fifth Item">
+                    <div class="description">
+                        <a href="/products/the-chevron-trousers-black" class="item-description">THE CHEVRON TROUSERS - BLACK<br></a>
+                        <span class="item-description">Sale price: €64,95</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="overlay-text">New Arrival</div>
+                    <img src="images/newItem6.png" alt="Sixth Item">
+                    <div class="description">
+                        <a href="/products/the-chevron-trousers-black" class="item-description">THE CHEVRON TROUSERS - BLACK<br></a>
+                        <span class="item-description">Sale price: €64,95</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="overlay-text">New Arrival</div>
+                    <img src="images/newItem7.png" alt="Seventh Item">
+                    <div class="description">
+                        <a href="/products/the-chevron-trousers-black" class="item-description">THE CHEVRON TROUSERS - BLACK<br></a>
+                        <span class="item-description">Sale price: €64,95</span>
+                    </div>
+                </div>
+                <!-- Add more items as needed -->
+             </div>
+            <div class="arrow right" onclick="scrollGallery_upcoming(0.25)">&gt;</div>
+        </div>
+    </div> 
+
+    <script>
+        function scrollGallery(direction) {
+            const gallery = document.getElementById('gallery');
+            const scrollAmount = gallery.clientWidth; // Scroll by the width of the gallery container
+            gallery.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+
+        function scrollGallery_upcoming(direction) {
+            const gallery = document.getElementById('gallery-upcoming');
+            const scrollAmount = gallery.clientWidth; // Scroll by the width of the gallery container
+            gallery.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+
+</html>

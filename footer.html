@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Section</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer {
+            background-color: #121212;
+            color: white;
+            padding: 40px 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            flex:0;
+            min-width: 200px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .footer-column p {
+            font-size: 0.9em;
+            color: #bbbbbb;
+            line-height: 1.2;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .footer-column ul li a {
+            color: #bbbbbb;
+            text-decoration: none;
+            font-size: 0.9em;
+            
+        }
+
+        .footer-column ul li a:hover {
+            color: white;
+        }
+
+        .subscribe {
+            border: 1px solid #555;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .subscribe input {
+            width: 100%;
+            padding: 10px;
+            background-color: #222;
+            border: none;
+            color: white;
+        }
+
+        .subscribe button {
+            background-color: #333;
+            border: none;
+            padding: 10px 1px;
+            cursor: pointer;
+            color: white;
+            border-radius: 2px;
+            margin-left: 0px;
+        }
+
+        .subscribe button:hover {
+            background-color: #555;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <footer class="footer">
+        <div class="footer-column">
+            <div class="logo">ICON. AMSTERDAM</div>
+            <h3>About us</h3>
+            <p>Established in 2018, ICON. AMSTERDAM is all about standing out from the crowd and staying unique.</p>
+            <p>In just a few years, the Amsterdam-based label is now part of the Dutch capital’s burgeoning streetwear scene and a leading global destination for the latest menswear.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Shop</h3>
+            <ul>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Best Sellers</a></li>
+                <li><a href="#">Summer Sale</a></li>
+                <li><a href="#">Shorts</a></li>
+                <li><a href="#">Trousers</a></li>
+                <li><a href="#">Denim Jeans</a></li>
+                <li><a href="#">Polos & T-Shirts</a></li>
+                <li><a href="#">Tops</a></li>
+                <li><a href="#">Sweaters</a></li>
+                <li><a href="#">Jackets</a></li>
+                <li><a href="#">Bundles</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Customer Support</h3>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Track Your Order</a></li>
+                <li><a href="#">Request a return / exchange</a></li>
+                <li><a href="#">Return & Refund Policy</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3 class="logo">Join the Club</h3>
+            <p>Get exclusive access to new product releases, special offers and restocks. Join the ICON. AMSTERDAM club.</p>
+            <div class="subscribe">
+                <input type="email" placeholder="E-mail">
+                <button>&nbsp;></button>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

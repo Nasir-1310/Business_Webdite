@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Sale Banner</title>
+    <style>
+        /* Sale Banner Styles */
+        .sale-banner {
+            background-color: #4B9191; /* Teal background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 0;
+            position: relative;
+            width: 100%;
+            color: white;
+        }
+
+        .sale-banner .top-text a {
+            color: white;
+            font-size: 1rem;
+            text-decoration: underline;
+            text-transform: uppercase;
+            letter-spacing:1px;
+        }
+
+      
+        .first-arr {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            padding: 0 20px; /* Keep arrows closer to text */
+        }
+
+        .first-arr.arr-left {
+            padding-right: 40px; /* Distance from text */
+        }
+
+        .first-arr.arr-right {
+            padding-left: 40px; /* Distance from text */
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .sale-banner .top-text a {
+                font-size: 1rem;
+            }
+
+            .first-arr {
+                padding: 0 5px;
+            }
+
+            .first-arr.arr-left {
+                padding-right: 20px;
+            }
+
+            .first-arr.arr-right {
+                padding-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sale-banner">
+        <div class="first-arr arr-left">&lt;</div>
+        <div class="top-text"><a href="#">END OF SUMMER SALE</a>: UP TO 60% OFF</div>
+        <div class="first-arr arr-right">&gt;</div>
+    </div>
+
+</body>
+</html>

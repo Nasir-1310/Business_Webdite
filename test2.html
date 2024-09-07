@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Summer Sale Banner</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .sale-banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4aa6a8; /* Banner background color */
+            color: white;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .sale-banner a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .sale-banner a:hover {
+            color: #ddd;
+            border-color: #ddd;
+        }
+
+        .sale-banner .arrow {
+            font-size: 14px;
+            padding: 10px;
+            cursor: pointer;
+            margin: 0 15px;
+        }
+
+        .sale-banner div {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        @media (max-width: 768px) {
+            .sale-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px 5px;
+            }
+
+            .sale-banner .arrow {
+                font-size: 18px;
+                margin: 10px 0;
+            }
+
+            .sale-banner div {
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sale-banner {
+                flex-direction: column;
+                padding: 10px 5px;
+            }
+
+            .sale-banner .arrow {
+                font-size: 18px;
+                padding: 8px;
+                margin: 5px 0;
+            }
+
+            .sale-banner div {
+                font-size: 12px;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sale-banner">
+        <div class="arrow">&lt;</div>
+        <div><a href="#">END OF SUMMER SALE</a>: UP TO 70% OFF</div>
+        <div class="arrow">&gt;</div>
+    </div>
+</body>
+</html>

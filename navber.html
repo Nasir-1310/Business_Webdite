@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Bar Styles */
+        .nav-bar {
+            background-color: #f8f8f8;
+            padding: 15px 0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .nav-bar ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-bar li {
+            margin: 0 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .nav-bar a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            color: #4aa6a8; /* Hover color */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-bar li {
+                margin: 0 10px;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-bar li {
+                margin: 0 5px;
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="#">NEW ARRIVALS</a></li>
+            <li><a href="#">BEST SELLERS</a></li>
+            <li><a href="#">SUMMER SALE</a></li>
+            <li><a href="#">SHORTS</a></li>
+            <li><a href="#">TROUSERS</a></li>
+            <li><a href="#">DENIM JEANS</a></li>
+            <li><a href="#">POLOS & T-SHIRTS</a></li>
+            <li><a href="#">TOPS</a></li>
+            <li><a href="#">SWEATERS</a></li>
+            <li><a href="#">JACKETS</a></li>
+            <li><a href="#">BUNDLES</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
